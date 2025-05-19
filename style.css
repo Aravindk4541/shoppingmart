@@ -1,0 +1,283 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  background-color: #333;
+  color: #fff;
+  flex-wrap: wrap;
+}
+
+header .logo {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+header nav ul {
+  font-size: x-large;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+header nav ul li {
+  margin: 0 60px;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Product Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  padding: 20px;
+}
+
+.product-card {
+  border: 5px solid #ddd;
+  padding: 50px;
+  text-align: center;
+  border-radius: 50px;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
+}
+
+.product-card:hover {
+  color: black;
+  border-radius: 30px;
+  padding: 10px;
+  border: none;
+}
+
+.product-card img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.product-card h3 {
+  margin: 15px 0;
+  font-size: 20px;
+}
+
+.product-card p {
+  color: #555;
+  margin: 10px 0;
+}
+
+.product-card button {
+  padding: 10px 15px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.product-card button:hover {
+  background-color: #555;
+}
+
+/* Newsletter */
+#newsletter {
+  background-image: url(images/banner/b14.png);
+  background-repeat: no-repeat;
+  background-position: 180px;
+  background-color: #041e42;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 75px;
+  flex-wrap: wrap;
+}
+
+#newsletter .newsletter-text h3 {
+  color: white;
+  font-size: 30px;
+  padding-bottom: 15px;
+}
+
+#newsletter .newsletter-text h5 {
+  color: rgb(151, 151, 151);
+  font-size: 17px;
+}
+
+#newsletter .newsletter-text h5 span {
+  color: rgb(216, 182, 29);
+}
+
+#newsletter .form input {
+  padding: 20px;
+  width: 350px;
+  height: 56px;
+  background-color: #d1d0d0;
+  border-radius: 6px 0 0 6px;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  margin-right: -4px;
+  margin-top: 1px;
+}
+
+#newsletter .form button {
+  padding: 20px;
+  width: 120px;
+  background-color: #088178;
+  color: white;
+  font-size: 17px;
+  border-radius: 0 6px 6px 0;
+  cursor: pointer;
+  border: none;
+}
+
+/* Footer */
+#footer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 75px;
+  background-color: #ececec;
+  flex-wrap: wrap;
+}
+
+#footer p,
+#footer a {
+  color: rgb(109, 109, 109);
+  text-decoration: none;
+}
+
+#footer a:hover {
+  color: #088178;
+}
+
+#footer .about a,
+#footer .myaccount a {
+  display: block;
+  padding: 8px 0;
+}
+
+#footer .download img {
+  border: 1px solid #08817969;
+  border-radius: 7px;
+}
+
+/* ==========================
+   Media Queries
+========================== */
+
+/* Tablets (481px–1024px) */
+@media (max-width: 1024px) {
+  header nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+  }
+
+  header nav ul li {
+    margin: 10px 0;
+  }
+
+  #newsletter {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    height: auto;
+  }
+
+  #newsletter .form input,
+  #newsletter .form button {
+    width: 100%;
+    border-radius: 6px;
+    margin: 10px 0;
+  }
+
+  #footer {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  #footer > div {
+    margin-bottom: 30px;
+  }
+}
+
+/* Mobile (≤480px) */
+@media (max-width: 480px) {
+  header {
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+  }
+
+  header .logo {
+    margin-bottom: 15px;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header nav ul li {
+    margin: 8px 0;
+  }
+
+  .product-card {
+    padding: 30px;
+  }
+
+  #newsletter .form input {
+    font-size: 16px;
+    height: 48px;
+  }
+
+  #newsletter .form button {
+    font-size: 16px;
+    height: 48px;
+  }
+}
+
+/* Desktop only (Optional: >1024px) */
+@media (min-width: 1025px) {
+  /* You can increase spacing, padding, font-sizes, etc. here */
+  
+  header {
+    padding: 40px 80px;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(4, 1fr);
+    padding: 40px;
+  }
+
+  .product-card {
+    padding: 60px;
+  }
+
+  #newsletter {
+    padding: 0 100px;
+  }
+
+  #footer {
+    padding: 100px;
+  }
+}
